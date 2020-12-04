@@ -1,0 +1,16 @@
+{
+    "name": "projeto/lsdev",
+    "description": "Projeto PHP OO",
+    "authors": [
+        {
+            "name": "Leandro Facim"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core",
+            "Sts\\": "app/sts"
+        }
+    },
+    "require": {}
+}
