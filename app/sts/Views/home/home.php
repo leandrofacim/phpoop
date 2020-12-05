@@ -52,11 +52,12 @@ if (!defined('URL')) {
     </div>
 
     <?php extract($this->dados['sts_servicos'][0]) ?>
+
     <div class="jumbotron servicos">
         <div class="container">
             <h2 class="display-4 text-center" style="margin-bottom: 40px;"><?= $titulo ?></h2>
             <div class="card-deck">
-                <div class="card text-center card-um">
+                <div class="card text-center anim_left">
                     <div class="icon-row tamanh-icone">
                         <span class="step size-96 text-danger">
                             <i class="icon <?= $icone_um ?>"></i>
@@ -67,7 +68,7 @@ if (!defined('URL')) {
                         <p class="card-text lead"><?= $descricao_um ?></p>
                     </div>
                 </div>
-                <div class="card text-center card-dois">
+                <div class="card text-center anim_bottom">
                     <div class="icon-row tamanh-icone">
                         <span class="step size-96 text-danger">
                             <i class="icon <?= $icone_dois ?>"></i>
@@ -78,7 +79,7 @@ if (!defined('URL')) {
                         <p class="card-text lead"><?= $descricao_dois ?></p>
                     </div>
                 </div>
-                <div class="card text-center card-tres">
+                <div class="card text-center anim_right">
                     <div class="icon-row tamanh-icone ">
                         <span class="step size-96 text-danger">
                             <i class="icon <?= $icone_tres ?>"></i>
@@ -96,9 +97,9 @@ if (!defined('URL')) {
     <?php extract($this->dados['sts_videos'][0]) ?>
     <div class="jumbotron video">
         <div class="container">
-            <h2 class="display-4 text-center video-titulo" style="margin-bottom: 40px;"><?= $titulo ?></h2>
-            <p class="lead text-center video-parag"><?= $descricao ?></p>
-            <div class="row justify-content-md-center video-cont">
+            <h2 class="display-4 text-center anim_left" style="margin-bottom: 40px;"><?= $titulo ?></h2>
+            <p class="lead text-center anim_right"><?= $descricao ?></p>
+            <div class="row justify-content-md-center anim_bottom">
 
                 <div class="col-12 col-md-8">
                     <div class="embed-responsive embed-responsive-16by9">
@@ -117,16 +118,16 @@ if (!defined('URL')) {
                 foreach ($this->dados['sts_artigos'] as $artigo) {
                     extract($artigo);
                 ?>
-                    <div class="card art-um">
-                        <a href="artigo.html">
-                            <img class="card-img-top" src="imagens/imagem_um.jpg" alt="Titulo do artigo">
+                    <div class="card anim_bottom">
+                        <a href="<?= URL .'artigo/'. $slug ?>">
+                            <img class="card-img-top" src="<?= URL .'assets/imagens/artigo/'. $id . '/'.$imagem?>" alt="<?= $titulo?>">
                         </a>
                         <div class="card-body">
-                            <a href="artigo.html">
-                                <h5 class="card-title text-center text-danger">Card title</h5>
+                            <a  href="<?= URL .'artigo/'. $slug ?>">
+                                <h5 class="card-title text-center text-danger"><?= $titulo?></h5>
                             </a>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="text-center"><a href="#" class="btn btn-danger">Mais Detalhes</a></p>
+                            <p class="card-text"><?= $descricao ?></p>
+                            <p class="text-center"><a href=" href="<?= URL .'artigo/'. $slug ?>"" class="btn btn-danger">Mais Detalhes</a></p>
                         </div>
                     </div>
                 <?php

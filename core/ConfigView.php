@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace Core;
 
@@ -12,9 +10,9 @@ namespace Core;
 class ConfigView 
 {
     private string $nome;
-    private array $dados;
+    private  $dados;
 
-    public function __construct(string $nome, array $dados = []) 
+    public function __construct(string $nome, $dados) 
     {
         $this->nome = $nome;
         $this->dados = $dados;

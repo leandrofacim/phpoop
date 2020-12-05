@@ -9,8 +9,14 @@ if (!defined('URL')) {
 
 class SobreEmpresa
 {
+    private array $dados;
+
     public function index()
     {
-        echo "sobre empresa";
+        $listarSobreEmpresa = new \Sts\Models\StsSobEmpresa();
+        $this->dados['sts_sobs_emps'] = $listarSobreEmpresa->listarSobEmp();
+
+        $carregarView = new \Core\ConfigView('sts/Views/sobEmp/sobEmp', $this->dados);
+        $carregarView->renderizar();
     }
 }

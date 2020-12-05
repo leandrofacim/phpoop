@@ -18,25 +18,25 @@
 
                     <li class="nav-item menu">
 
-                        <a class="nav-link" href="index.html">Home </a>
+                        <a class="nav-link" href="<?= URL ?>">Home </a>
 
                     </li>
 
                     <li class="nav-item menu">
 
-                        <a class="nav-link" href="sobre_empresa.html">Sobre a Empresa</a>
+                        <a class="nav-link" href="<?= URL. 'sobre_empresa' ?>">Sobre a Empresa</a>
 
                     </li>
 
                     <li class="nav-item menu">
 
-                        <a class="nav-link" href="blog.html">Blog </a>
+                        <a class="nav-link" href="<?= URL. 'blog' ?>">Blog </a>
 
                     </li>
 
                     <li class="nav-item menu">
 
-                        <a class="nav-link" href="contato.html">Contato</a>
+                        <a class="nav-link" href="<?= URL. 'contato' ?>">Contato</a>
 
                     </li>
 
