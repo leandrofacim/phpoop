@@ -42,7 +42,7 @@ class StsRead extends StsConn
     public function fullRead(string $query, $parseString = null)
     {
         $this->select = $query;
-        
+
         if (!empty($parseString)) {
             parse_str($parseString, $this->values);
         }
@@ -74,7 +74,7 @@ class StsRead extends StsConn
     {
         if ($this->values) {
             foreach ($this->values as $link => $valor) {
-                if ($link === 'limit' || $link === 'offst') {
+                if ($link === 'limit' || $link === 'offset') {
                     $valor = (int) $valor;
                 }
                 $this->query->bindValue(":{$link}", $valor, (is_int($valor) ? PDO::PARAM_INT : PDO::PARAM_STR));

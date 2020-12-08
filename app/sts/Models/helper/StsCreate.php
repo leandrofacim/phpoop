@@ -17,12 +17,11 @@ class StsCreate extends StsConn
     private $query;
     private object $conn;
 
-  
     public function getResultado()
     {
         return $this->resultado;
     }
-  
+
     public function exeCreate(string $tabela, array $dados)
     {
         $this->tabela = $tabela;

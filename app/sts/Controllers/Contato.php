@@ -19,6 +19,13 @@ class Contato
             unset($this->dados['cadMsgCont']);
             $cadContato = new \Sts\Models\StsContato();
             $cadContato->cadContato($this->dados);
+
+            if ($cadContato->getResultado()) {
+                $this->dados['form'] = null;
+            } else {
+
+                $this->dados['form'] = $this->dados;
+            }
         }
 
         $carregarView = new \Core\ConfigView('sts/Views/contato/contato', $this->dados);

@@ -2,9 +2,9 @@
 session_start();
 ob_start();
 
-define('URL', 'http://localhost/lfsite/');
+define('URL', 'http://localhost/phpoop/');
 
-define("URL_ADM", 'http://localhost/lfsite/adm');
+define("URL_ADM", 'http://localhost/phpoop/adm');
 
 define('CONTROLLER', 'Home');
 
@@ -15,4 +15,4 @@ define('METODO', 'index');
 define('HOST', 'localhost');
 define('USER', 'root');
 define('PASS', '');
-define('DB_NAME', 'lfproject');
+define('DB_NAME', 'lfprojeto');
