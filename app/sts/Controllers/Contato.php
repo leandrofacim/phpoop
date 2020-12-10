@@ -1,6 +1,6 @@
 <?php
 
-namespace Sts\Controllers;
+namespace App\Sts\Controllers;
 
 if (!defined('URL')) {
     header('Location: /');
@@ -27,6 +27,12 @@ class Contato
                 $this->dados['form'] = $this->dados;
             }
         }
+
+        $listarMenu = new \Sts\Models\StsMenu();
+        $this->dados['menu'] = $listarMenu->listarMenu();
+
+        $listarSeo = new \Sts\Models\StsSeo();
+        $this->dados['seo'] = $listarSeo->listarSeo();
 
         $carregarView = new \Core\ConfigView('sts/Views/contato/contato', $this->dados);
         $carregarView->renderizar();

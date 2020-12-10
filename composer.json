@@ -9,7 +9,8 @@
     "autoload": {
         "psr-4": {
             "Core\\": "core",
-            "Sts\\": "app/sts"
+            "Sts\\": "app/sts",
+            "App\\": "app"
         }
     },
     "require": {}
